@@ -266,23 +266,6 @@ def trans_loss(s, y, func, device, odeint_step):
         return (y_00, y_0, y_0)
 
 
-# def gcd_list(numbers):
-#     """
-#     If input is not pseudo time and is true time, the odeint step should be count as gcd.
-#     "odeint_step = gcd_list([num * 100 for num in integral_time]) / 100"
-#     """
-#     def _gcd(a, b):
-#         while b:
-#             a, b = b, a % b
-#         return a
-#
-#     gcd_value = numbers[0]
-#     for i in range(1, len(numbers)):
-#         gcd_value = _gcd(gcd_value, numbers[i])
-#
-#     return gcd_value
-
-
 def train_model(mse, func, arguments, data_train, train_time, integral_time, sigma_now, options, device, itr):
     global global_variable
     warnings.filterwarnings("ignore")
