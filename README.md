@@ -3,4 +3,13 @@
 
   To define an energy indicator based on continuous cellular dynamics, the cell differentiation potential was dissected into the potential of cell migration and proliferation, and a feasible computational framework was developed to reconstruct Waddington landscape based on sparse autoencoder and reaction diffusion advection equation. Firstly, a feature selection approach was employed for the cell type-specific discrete data with pseudo time series, which was based on the identification of highly variable genes. Secondly, a deep learning method based on sparse autoencoder and reaction diffusion advection equation was introduced to reconstruct state-continuous cellular dynamics from the perspective of cell migration and proliferation, which is inspired by the TIGON. Subsequently, the energy indicator $U_{m}$ was defined to characterize the potential of cell migration inherent in the cell type-specific gene regulatory network learned by the GRN sparse autoencoder. And the energy indicator $U_{p}$ was defined to characterize the potential of cell proliferation inherent in the cell type-specific growth function learned by the BRD sparse autoencoder. Finally, the differentiation potential $U$ of different cell types is the sum of their cell migration potential and cell proliferation potential, and the landscape elevation can be defined by the differentiation potentials of the corresponding cell state in both processes.
 
-  
+Description
+
+Data
+"TCGA_LUAD_all_deg_sur_expr_info.xlsx" and "TCGA_LUAD_all_deg_sur_expr.xlsx" is the data of 560 samples' DESGs gene expression data from TCGA-LUAD, 
+whose difference lies in whether it contains information such as subtypes. 
+"Cancerous Time Estimation for Interpreting the Evolution of Lung Adenocarcinoma.py" is the main code to obtain the patient quasi-potential landscape of LUAD. 
+The 3D figure of the landscape is drew by matlab"landscape3D.m". 
+The cancerous time is calculated by "cancerous time.py".
+"oncogenetic paths.rar" contains all oncogenetic paths.
+"Modules_different_evolutionary_stage" contains all modules of different evolutionary stage. 
