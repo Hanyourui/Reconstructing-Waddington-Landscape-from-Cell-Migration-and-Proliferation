@@ -30,7 +30,7 @@ class Arguments:
 
 def input_args():
     arguments = Arguments()
-    arguments.dataset = input("Name of the dataset. Option: embryo, etc. (default: embryo):") or "embryotsne_ex3"
+    arguments.dataset = input("Name of the dataset. Option: embryo, etc. (default: embryo):") or "embryo"
     statepoints = input("State points of dataset (default: 1, 2, 3, 4, 5):")
     arguments.pseudo_time = [float(sp.strip())-1 for sp in statepoints.split(",")] if statepoints else [0, 1, 2, 3, 4]
     arguments.num_iters = int(input("Number of the training iterations (default: 6000):") or 4500)
